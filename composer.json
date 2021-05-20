@@ -1,5 +1,5 @@
 {
-  "name": "backup-manager/laravel",
+  "name": "koldunya/backup-manager",
   "description": "Database backup manager seamlessly integrated with Laravel 4 or 5 with user-definable procedures and support for S3, Dropbox, FTP, SFTP, and more.",
   "authors": [
     {
