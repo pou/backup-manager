@@ -27,11 +27,11 @@ trait AutoComplete {
         };
 
         try {
-            return $this->useSymfontDialog($dialog, $list, $default, $validation);
+            return $this->useSymfontDialog($dialog, $list, $validation, $default);
         } catch (InvalidArgumentException $error) {
             //
         }
-        return $this->useSymfonyQuestion($dialog, $default, $validation);
+        return $this->useSymfonyQuestion($dialog, $validation, $default);
     }
 
     /**
@@ -40,7 +40,7 @@ trait AutoComplete {
      * @param null $default
      * @return mixed
      */
-    protected function useSymfontDialog($dialog, array $list, $default = null, $validation) {
+    protected function useSymfontDialog($dialog, array $list, $validation, $default = null) {
         $helper = $this->getHelperSet()->get('dialog');
 
         return $helper->askAndValidate(
@@ -53,7 +53,7 @@ trait AutoComplete {
      * @param null $default
      * @return mixed
      */
-    protected function useSymfonyQuestion($dialog, $default = null, $validation) {
+    protected function useSymfonyQuestion($dialog, $validation, $default = null) {
         $question = new Question($dialog . ' ', $default);
         $question->setValidator($validation);
         $helper = $this->getHelper('question');
