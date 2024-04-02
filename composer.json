@@ -8,7 +8,13 @@
       "homepage": "https://shawnmc.cool"
     }
   ],
-  "require": {
+  "repositories": {
+    "backup-manager-base": {
+      "type": "git",
+      "url": "https://github.com/pou/backup-manager-base"
+    }
+  },
+    "require": {
     "backup-manager/backup-manager": "^3.0",
     "php": ">=7.3",
     "symfony/process": ">=3",
@@ -17,7 +23,6 @@
     "illuminate/console": ">=5.5"
   },
   "require-dev": {
-    "mockery/mockery": "dev-master",
     "satooshi/php-coveralls": "~0.6"
   },
   "config": {
