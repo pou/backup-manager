@@ -1,5 +1,5 @@
 {
-  "name": "koldunya/backup-manager",
+  "name": "ambidevelopment/backup-manager",
   "description": "Database backup manager seamlessly integrated with Laravel 4 or 5 with user-definable procedures and support for S3, Dropbox, FTP, SFTP, and more.",
   "authors": [
     {
@@ -15,7 +15,7 @@
     }
   },
     "require": {
-    "backup-manager/backup-manager": "^3.0",
+    "ambidevelopment/backup-manager-base": "^3.0",
     "php": ">=7.3",
     "symfony/process": ">=3",
     "illuminate/support": ">=5.5",
